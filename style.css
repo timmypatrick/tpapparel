@@ -1,0 +1,1127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: white;
+    --black: black;
+    --banner: rgb(165, 136, 42);
+    --lightbrown: rgb(61, 58, 58);
+    --lightgrey: rgb(240, 235, 235);
+    --lightgrey2: rgb(180, 175, 175);
+    --cloth-wrapper: rgba(0,0,0,.2);
+    --red: red;
+}
+
+body{
+    background-color: var(--white);
+    font-family: poppins;
+}
+
+header{
+    background-color: var(--white);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0px 1px 10px var(--lightgrey2);
+}
+
+.hamburger{
+    cursor: pointer;
+}
+
+.hamburger div{
+    width: 20px;
+    height: 2px;
+    background-color: var(--banner);
+    margin-bottom: 5px;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.hamburger div:last-child{
+    margin-bottom: 0px;
+}
+
+header > h2 a{
+    color: var(--banner);
+    text-decoration: none;
+}
+
+header .cart{
+    cursor: pointer;
+}
+
+header .cart i{
+    font-size: 25px;
+    color: var(--banner);
+}
+
+nav{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 1;
+    padding: 70px 15px;
+    top: 0px;
+    left: -100%;
+    transition: 0.2s;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    border-bottom: 1px solid var(--banner);
+    padding-bottom: 15px;
+}
+
+nav ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--banner);
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--banner);
+    text-align: center;
+}
+
+.banner-image{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
+.banner-image img{
+    width: 200%;
+    margin-left: -170px;
+    margin-top: 20px;
+}
+
+.banner-description{
+    text-align: center;
+    margin-top: -200px;
+    position: relative;
+    width: 100%;
+    color: var(--white);
+}
+
+.banner-description p:first-child{
+    font-size: 30px;
+}
+
+.banner-description p:last-child{
+    background-color: var(--white);
+    color: var(--black);
+    width: fit-content;
+    margin: 15px auto 0px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner-description p:last-child a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+/* Cloth Section */
+
+.top, .bottom{
+    padding: 0px 15px;
+}
+
+.top .both-tops, .bottom .both-bottom{
+    color: var(--lightbrown);
+    font-size: 14px;
+    margin: 10px 0px 20px;
+}
+
+.top div:nth-child(2) span, .bottom div:nth-child(2) span{
+    padding-bottom: 5px;
+}
+
+.top span.t-shirt-heading, .bottom span.short-heading{
+    border-bottom: 2px solid var(--lightbrown);
+    margin-right: 20px;
+}
+
+.t-shirt-heading, .shirt-heading, .short-heading, .trouser-heading{
+    cursor: pointer;
+}
+
+.t-shirts, .shirts, .shorts, .trousers{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 50px;
+}
+
+.shirts, .view-more-shirts, .trousers, .view-more-trousers{
+    display: none;
+}
+.t-shirt1{
+    width: 90%;
+    margin: auto;
+}
+
+.t-shirt1 > .image-wrapper{
+    background-color: var(--cloth-wrapper);
+    color: var(--banner);
+    display: block;
+    width: 90%;
+    height: 200px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.t-shirt1 > .image-wrapper > img{
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.t-shirt1 > .image-wrapper > img.large-img{
+    width:65px;
+}
+
+.t-shirt1 > .image-wrapper i{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 25px;
+}
+
+.t-shirt1 > .image-wrapper:hover{
+    width: 100%;
+    height: 220px;
+}
+
+.t-shirt1 .image-description{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.t-shirt1 .image-description .brand{
+    color: var(--lightbrown);
+}
+
+.t-shirt1 .image-description p:last-child{
+    margin-top: 10px;
+
+}
+
+.old-price{
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new-price{
+    color: var(--red);
+}
+
+.view-more-t-shirts, .view-more-shirts, .view-more-shorts, .view-more-trousers{
+    background-color: var(--cloth-wrapper);
+    color: var(--black);
+    width: fit-content;
+    margin: 15px auto 0px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-more-t-shirts a, .view-more-shirts a, .view-more-shorts a, .view-more-trousers a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.motivation{
+    padding: 0px 15px;
+}
+
+.mp1{
+    overflow: hidden;
+}
+
+.mp1 img{
+    width: 80%;
+    float: right;
+}
+
+.mp2 img{
+    width: 40%;
+    margin-top: -100px;
+}
+
+.motivational-texts{
+    margin-top: 20px;
+}
+
+.author{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.motivational-texts p:last-child{
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.motivational-texts p:last-child:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.motivational-texts p:last-child:hover a{
+    color: var(--white);
+}
+
+.motivational-texts a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.email-sign-up{
+    background-color: var(--lightgrey);
+    margin: 40px 0px 0px;
+    padding: 30px 15px;
+}
+
+.sign-up-text > div{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.sign-up-text > p{
+    font-size: 12px;
+    margin: 15px 0px;
+}
+
+.email-sign-up input{
+    display: block;
+    width: 100%;
+    color: var(--lightbrown);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border: 1px solid var(--lightbrown);
+}
+
+.email-sign-up button{
+    display: block;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    outline: none;
+    border: none;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.form-description{
+    font-size: 12px;
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--lightgrey);
+    font-size: 13px;
+    padding: 30px 15px 20px;
+}
+
+footer .summery{
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--lightgrey);
+}
+
+footer .about-us, footer .categories, footer .help{
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--lightgrey);
+}
+
+footer .show{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .show > p{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+footer .hide{
+    height: 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+footer .hide p{
+    margin: 5px 0px;
+    font-size: 12px;
+    color: var(--lightgrey2);
+}
+
+footer .hide p a{
+    text-decoration: none;
+    color: var(--lightgrey2);
+}
+
+.copyright{
+    font-size: 11px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+
+/* Shop Page Stylesheet */
+
+.shop{
+    padding: 80px 0px 30px;
+}
+
+
+
+/* About TP Apparel Stylesheet */
+
+.about_tp_apparel{
+    padding: 70px 15px 30px;
+}
+
+.timmy_patrick{
+    background-color: var(--banner);
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.timmy_patrick img{
+    width: 35%;
+    margin: 20px 0px 0px 0px;
+}
+
+.about_tp_apparel section.description h3{
+    margin: 30px 0px 10px;
+}
+
+
+
+/* About Career Stylesheet */
+
+.about-career{
+    padding: 50px 15px 0px;
+}
+
+.team-image{
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.team-image img{
+    width: 100%;
+}
+
+.career-description{
+    margin-bottom: 50px;
+}
+
+.career-description h3{
+    margin: 20px 0px 5px;
+}
+
+
+
+/* FAQs Stylesheet */
+
+.faqs{
+    padding: 70px 15px 30px;
+    overflow: hidden;
+}
+
+.faqs-heading{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faqs .question-answer:not(:last-child){
+    margin-bottom: 25px;
+}
+
+.faqs .question{
+    margin-bottom: 7px;
+}
+
+.faqs .answer{
+    font-size: 14px;
+    color: var(--lightbrown);
+    width: 95%;
+}
+
+.faqs .answer p:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+
+/* Contact Stylesheet */
+
+.contact{
+    padding: 70px 15px 30px;
+}
+
+.contact .user{
+    text-align: center;
+}
+
+.contact .user h4, .contact .user h5{
+    margin-bottom: 20px;
+}
+
+.contact input{
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 7px 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid var(--lightgrey2);
+}
+
+.contact textarea{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid var(--lightgrey2);
+    padding: 10px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.contact button{
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.contact .developer{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact .developer .phone{
+    margin-bottom: 50px;
+}
+
+.contact .developer .icon{
+    background-color: var(--banner);
+    color: var(--white);
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.contact .developer .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.contact .developer .write-up h4{
+    margin: 10px 0px 5px;
+}
+
+.contact .developer .write-up p{
+    width: 70%;
+    margin: auto;
+}
+
+
+
+/* Cart Stylesheet*/
+
+main.cart{
+    padding: 100px 15px 30px;
+    text-align: center;
+}
+
+main.cart .cart-icon{
+    background-color: var(--banner);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+main.cart .cart-icon i{
+    font-size: 50px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.empty-cart{
+    padding: 0px 0px 30px;
+}
+
+.empty-cart p{
+    margin: 3px 0px 30px;
+}
+
+.empty-cart a{
+    border: 1px solid var(--banner);
+    background-color: var(--banner);
+    color: var(--white); 
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.empty-cart a:hover{
+    background-color: var(--white);
+    color: var(--banner);
+}
+
+
+
+/* Purchase Stylesheet */
+
+.purchase{
+    padding: 40px 0px 30px;
+}
+
+.product-image{
+    background-color: var(--cloth-wrapper);
+    text-align: center;
+    padding: 40px 0px;
+    overflow: hidden;
+}
+
+.purchase img{
+    width: 70%;
+}
+
+.product-description{
+    margin: 30px 15px;
+}
+
+.product-size{
+    margin: 20px 0px;
+}
+
+.product-size div:last-child{
+    margin-top: 10px;
+}
+
+.product-size div:last-child p{
+    border: 1px solid var(--lightgrey2);
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-size div:last-child p.focused-size{
+    border: 2px solid var(--black);
+}
+
+.product-size div:last-child p:not(:last-child){
+    margin-right: 10px;
+}
+
+.product-quantity .increament-decreament{
+    border: 1px solid var(--black);
+    width: fit-content;
+    padding: 3px 10px;
+    margin-top: 5px;
+}
+
+.product-quantity .increament-decreament span:not(:last-child){
+    margin-right: 10px;
+}
+
+.product-quantity .increament, .product-quantity .decreament{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product-delivery{
+    text-align: center;
+    padding: 0px 15px;
+}
+
+.product-delivery h4{
+    margin-bottom: 10px;
+}
+
+.product-delivery form input{
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--lightgrey2);
+    outline: none;
+}
+
+.product-delivery button{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    outline: none;
+    width: 100px;
+    margin: 20px auto 0px;
+    padding: 10px 0px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.product-payment, .order-summery{
+    margin: 30px 15px 0px;
+}
+
+.product-payment h4, .order-summery h4{
+    margin-bottom: 10px;
+}
+
+.product-payment ul{
+    margin-left: 20px;
+}
+
+.all-prices > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-cost{
+    font-weight: bold;
+}
+
+.complete-order{
+    background-color: var(--black);
+    color: var(--white);
+    width: 200px;
+    margin: 40px auto 0px;
+    padding: 10px 0px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+/* Thank You Stylesheet */
+
+.greetings{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.greeting-image{
+    overflow: hidden;
+}
+
+.greeting-image img{
+    width: 100%;
+}
+
+.greetings-description{
+    width: 100%;
+    margin: -50px auto 30px;
+}
+
+.thanks{
+    background-color: var(--banner);
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.greetings a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+
+/* Responsive Stylesheet */
+
+@media only screen and (min-width: 700px){
+    header{
+        padding: 10px 50px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    nav{
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        left: 0px;
+        z-index: 3;
+        background-color: transparent;
+    }
+
+    nav > ul{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+        margin-right: 120px;
+        padding-top: 15px;
+    }
+
+    nav ul li{
+        border: none;
+        padding-bottom: 3px;
+        font-weight: bold;
+    }
+
+    nav ul li:hover{
+        border-bottom: 2px solid var(--banner);
+    }
+    
+    nav ul li:not(:last-child){
+        margin-bottom: 0px;
+    }
+
+    .banner-image{
+        width: 70%;
+        float: right;
+    }
+
+    .banner-image img{
+        width: 650px;
+    }
+
+    .banner-description{
+        text-align: left;
+        margin: 0%;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        width: fit-content;
+        color: var(--white);
+    }
+
+    .banner-description p:last-child{
+        margin-left: 0px;
+    }
+
+    .top, .bottom{
+        padding: 0px 50px;
+    }
+
+    .t-shirts, .shirts, .shorts, .trousers{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .motivation{
+        padding: 0px 50px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .motivational-texts{
+        order: 1;
+    }
+
+    .motivational-pictures{
+        order: 2;
+    }
+
+    .mp1 img{
+        width: 300px;
+        float: none;
+    }
+
+    .mp2 img{
+        width: 130px;
+        margin-left: -50px;
+    }
+    
+    .motivational-texts{
+        margin-top: -100px;
+    }
+
+    .email-sign-up{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sign-up-text{
+        width: 400px;
+        padding-right: 20px;
+    }
+
+    .form{
+        width: 400px;
+    }
+
+    .form form{
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form form input{
+        width: 320px;
+        height: 35px;
+    }
+
+    .form form button{
+        width: 70px;
+    }
+
+    footer{
+        padding: 30px 50px 20px;
+    }
+
+    footer .footer-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .summery{
+        width: 350px;
+        border: none;
+        padding-right: 20px;
+    }
+
+    footer .about-us, footer .categories, footer .help{
+        width: 100px;
+        border: none;
+    }
+
+    footer .show > p{
+        cursor: auto;
+    }
+
+    footer .show p:last-child{
+        display: none;
+    }
+
+    footer .hide{
+        height: auto;
+        cursor: pointer;
+    }
+
+
+
+    /* Shop Stylesheet */
+
+    .shop{
+        padding-left: 50px;
+        padding-right: 30px;
+        margin: 0px;
+    }
+
+
+    
+    /* About TP Apparel Stylesheet */
+
+    .about_tp_apparel{
+        display: flex;
+        align-items: center;
+        padding: 70px 50px 30px;
+    }
+    
+    .timmy_patrick{
+        width: 50%;
+        height: 60vh;
+        order: 2;
+    }
+    
+    .timmy_patrick img{
+         width: 30%;
+    }
+
+    .about_tp_apparel section.description{
+        width: 50%;
+        order: 1;
+        margin-right: 30px;
+    }
+
+
+
+    /* About Career Stylesheet */
+
+    .about-career{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about-career-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .career-description{
+        margin-bottom: 0px;
+    }
+
+    .mission-vision{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-image img{
+        width: 80%;
+    }
+
+    .mission-vision .team-image img{
+        width: 50%;
+    }
+
+
+
+    /* FAQs Stylesheet */
+
+    .faqs{
+        width: 680px;
+        margin: auto;
+    }
+
+
+
+    /* Contact Stylesheet */
+
+    .contact .user{
+        width: 500px;
+        margin: auto;
+    }
+
+    .contact .developer{
+        width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    /* Cart Stylesheet */
+
+    .empty-cart button{
+        width: 400px;
+    }
+
+    .cart-footer{
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+    }
+
+
+
+    /* Purchase Stylesheet */
+
+    .purchase{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .product-details-delivery{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .product-delivery{
+        padding: 0px;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 40px;
+    }
+
+    .product-image{
+        width: 300px;
+        margin-top: 40px;
+    }
+
+    .product-description{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .product-payment{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 400px;
+    }
+
+    .order-summery{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 300px;
+    }
+
+
+
+    /* Thank You Stylesheet */
+
+    .greetings{
+        width: 500px;
+    }
+}
